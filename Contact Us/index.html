@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="CU.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a471df1a92.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="div1a">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+            <form action="#">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Last name..">
+        
+            <label for="Course">Course</label>
+            <select id="Course" name="Course">
+              <option value="none">Select your course</option>
+              <option value="bca">B.C.A.</option>
+              <option value="bsc">B.Sc. IT</option>
+              <option value="mca">M.C.A.</option>
+            </select>
+          
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+    </div>
+    <div class="a">
+        <div class="b">Contact Us</div>
+    </div>
+    <div class="div0">
+        <div class="div1"><a href="#"><i class="fas fa-at" id="at"></i></a></div>
+        <div class="div2"><i class="fas fa-phone" id="ph"></i></div>
+        <!-- <div id="div2a"></div> -->
+        <div class="div3" onclick="openNav()"><i class="fab fa-twitter" id="twt"></i><i class="fab fa-github" id="git"></i><br>
+            <i class="fab fa-facebook-f" id="fb"></i><i class="fab fa-discord" id="dis"></i>
+        </div>
+    </div>
+    
+ <div id="mySidebar" class="sidebar">  
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+   <a href="#">Twitter</a>
+   <a href="#">Facebook</a>
+   <a href="#">Github</a>
+   <a href="#">Discord</a>
+  </div>
+
+<script>
+    var modal = document.getElementById("div1a");
+    var btn = document.getElementById("at");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+    }}
+    function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</html>

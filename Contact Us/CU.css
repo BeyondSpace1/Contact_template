@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-image:linear-gradient(175deg, red 0%,blue 50%);
+    background-attachment: fixed;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+a:link{
+    text-decoration: none;
+}
+.div0{
+    height: 80vh;
+    background-color: rgb(54, 53, 53); /*nice*/
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div1{
+    background-color: rgb(54, 53, 53);
+    /* border: 2px solid black; */
+    border-radius: 40px;
+    height: 60vh;
+    width: 30vw;   
+    position: absolute;
+    left: 50px;
+}
+#div1a{
+    background-color: rgba(255, 255, 255, 0.315);
+    height: 100%;
+    width:100%;
+    z-index: 10;
+    display: none;
+    position: fixed;
+}
+.div2{
+    background-color: rgb(54, 53, 53);
+    /* border: 2px solid black; */
+    border-radius: 30px;
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    right: 50px;
+    z-index: 2;
+
+}
+.div3{
+    background-color: rgb(54, 53, 53);
+    /* border: 2px solid black; */
+    border-radius: 30px;
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.div1:hover,.div2:hover,.div3:hover{
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.596), -5px -5px 15px rgba(255, 255, 255, 0.144);
+}
+.a {
+    background-size: cover;    
+    height: 200px; 
+    display: flex;
+    align-items: center;
+}
+  
+.b {
+    background-color: white;
+    /* color: black; */
+    border-radius: 10px;
+    font-size: 5vw; 
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Lobster', cursive;
+    mix-blend-mode: screen;  
+}
+#at{
+    font-size: 35vh;
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    color: #000;;
+}
+#at:hover{
+    color: #EA4335;    
+}
+#ph{
+    font-size: 35vh;
+    position: absolute;
+    top: 70px;
+    right: 100px;
+}
+#ph:hover {
+    color: orange;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+#twt,#git,#fb{
+    font-size: 20vh;
+}   
+#twt:hover{
+    color: #1DA1F2;
+}
+#fb:hover{
+    color: #4267B2;
+}
+#dis{
+    font-size: 20vh;
+    padding: 20px;
+}
+#dis:hover{
+    color:#738ADB;
+}
+@media screen and (max-width:380px) {
+    body{
+
+        display: none;
+    }
+}
+@media screen and (max-width:480px) and (min-width:380px){
+    .a{
+        height: 100px;
+        width: auto;
+    }
+    .div0{
+        display: block;
+        height: 100vh;
+    }
+    .div1,.div2,.div3,#div2a{
+        position: relative;
+        /* border: 2px solid black; */
+        height:30vh;
+        width: 30vh;
+        left:120px;
+        top: 10px;
+        margin-bottom: 15px;
+    }
+    #twt,#fb,#git,#dis,#at,#ph{
+        font-size:  10vh;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        right: 65px;
+        align-items: center;
+    }
+    #at,#ph{
+    font-size: 15vh;
+    right: 55px;
+    top: 50px;
+    }
+    .b{
+        background: none;
+        color: rgb(233, 218, 0);
+    }
+}
+@media screen and (max-width:600px) and (min-width:480px) {
+    .a{
+        height: 100px;
+        width: auto;
+    }
+    .div0{
+        display: block;
+        height: 100vh;
+    }
+    .div1,.div2,.div3,#div2a{
+        position: relative;
+        /* border: 2px solid black; */
+        height:30vh;
+        width: 50vh;
+        left:120px;
+        top: 10px;
+        margin-bottom: 15px;
+    }
+    #twt,#fb,#git,#dis,#at,#ph{
+        font-size:  10vh;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        right: 65px;
+        align-items: center;
+    }
+    #at,#ph{
+        font-size: 15vh;
+        right: 100px;
+        top: 50px;
+    }
+    .b{
+        background: none;
+        color: rgb(233, 218, 0);
+    }
+}
+@media screen and (min-width:600px)and (max-width:800px) {
+    .div1,.div2,.div3,#div2a{
+        width: 25vw;
+        /* display: block; */
+    }
+    #at {
+        font-size: 20vh;
+        position: absolute;
+        top: 130px;
+        right: 15px;
+    }
+    .b{
+        background-color: #ffffff00;
+        color: #ffdc00;
+    }
+    #ph {
+        font-size: 20vh;
+        position: absolute;
+        top: 120px;
+        right: 20px;
+    }
+    #twt,#fb,#git,#dis{
+        font-size: 12vh;
+    }
+    #dis{
+        padding: 5px;
+    }
+}
+@media screen and (min-width:900px) and (max-width:944px) {
+    #at,#ph{
+        right: 10px;
+    }
+
+    .div1,.div2,#div2a{
+        width: 40vh;
+    }
+    .b{
+        background-color: #ffffff00;
+        color: #ffdc00;
+    }
+}
+@media screen and (min-width:800px) and (max-width:900px) {
+    .div1,.div2,#div2a{
+        width: 30vh;
+    }
+    #twt,#fb,#git,#dis{
+        font-size: 15vh;
+    }
+    #at, #ph {
+        font-size: 25vh;
+        right: 20px;
+        top: 100px;
+    }
+    .b{
+        background-color: #ffffff00;
+        color: #ffdc00;
+    }
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    border-radius: 10px;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    font-family: 'Lobster', cursive;
+}
+
+ @keyframes animatetop {
+    from {top:0px; opacity:0}
+    to {top:300px; opacity:1}
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4e0aec;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+}
+  
+input[type=submit]:hover {
+    background-color: #4546a0;
+} 
+/* #div2a{
+    background-color: orange;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    right: 50px;
+    bottom: -40px;
+    z-index: 1;
+    display: none;
+}
+.div2:hover+ #div2a{
+    display: block;
+} */
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
